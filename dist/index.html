@@ -15,7 +15,7 @@
     }
     document.documentElement.classList.add('opening-locked');
   </script>
-  <link rel="stylesheet" href="./estilos.css?v=clean-1">
+  <link rel="stylesheet" href="./estilos.css?v=music-1">
   <link rel="stylesheet" href="./lol.css?v=clean-1">
   <link rel="stylesheet" href="./tft.css?v=clean-1">
   <link rel="stylesheet" href="./garage.css?v=5">
@@ -31,6 +31,7 @@
   <script defer src="./lol.js?v=clean-1"></script>
   <script defer src="./tft.js?v=soft-entry-4"></script>
   <script defer src="./garage.js?v=3"></script>
+  <script defer src="./musica.js?v=3"></script>
 </head>
 <body>
   <div id="opening-gate" class="launch-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
@@ -382,6 +383,8 @@
     </section>
   </main>
 
+  <button class="music-toggle" type="button" aria-pressed="true" hidden>Música</button>
+
   <dialog class="letter-dialog" id="creator-letter-dialog" aria-labelledby="letter-dialog-title" data-lenis-prevent>
     <div class="letter-shell">
       <header class="letter-toolbar">
@@ -411,7 +414,32 @@
     <p>Te quiero hermano</p>
     <p class="letter-signature">- Hanyer Alegría</p>
   </template>
-  <template id="letter-ronald"></template>
-  <template id="letter-alessandro"></template>
+  <template id="letter-ronald">
+    <p>Claro, aquí tienes una mini carta para tu mejor amigo. 😊</p>
+    <p>La amistad es uno de los regalos más maravillosos que nos brinda la vida. A lo largo de nuestro camino, conocemos personas que dejan huellas imborrables en nuestros corazones, iluminando nuestros días con alegría, risas y momentos inolvidables. Hoy quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón, porque una amistad tan especial como la nuestra merece ser celebrada. ❤️✨</p>
+    <p>Naaaaa mentira, te fuiste troleado amigo.<br>
+    Antes de ponerme en modo Gabriela Mistral: «Dame la mano y danzaremos; dame la mano y me amarás». Tampoco te tomes literal eso de «dame la mano y me amarás» que weko de mi parte jaajssjsja, solo fue para entrar en el modo poeta.</p>
+    <p>Lo primero que quiero decir es que no soy muy bueno escribiendo cartas ni expresándome, pero lo voy a intentar. Para todo hay una primera vez 👉🏼👈🏼.</p>
+    <p>Y lo segundo es que esta mini carta es un 5% de seriedad y un 95% de yo escribiendo puras weás, porque el Hanyer me leyó la carta que te hizo y casi me pongo a llorar. Y como sé la forma en que está distribuida la página, sé que leerás la del Hanyer primero, después la de tu hermano y al último la mía, así que esta carta es como para cambiar el mood (si leíste la mía primero, me arruinaste el predict que me había tirado jakdskssksks).</p>
+    <p>Querido Milovan, alias Milo, Erlin Jalan, Trolevan, Tionesquiq, Wenamiking, Ttttocho, el terror de la midlane:</p>
+    <p>Ya han pasado casi 3 años desde que nos conocemos, y pensar que el primer día que llegaste al grupo y te sentaste con nosotros a comer ni siquiera una palabra nos dijimos. Y ahora eres uno de los amigos con los que más paso tiempo, hablando de cualquier cosa que salga en el momento y también jugando hasta tarde, aunque a mí me reten por pasarme de las 1:30 jijijiiiji.</p>
+    <p>Tampoco hay que olvidar a nuestro compañero ciego y sordo, que ojalá nos presente a su hermana algún día jadjssjssjs.</p>
+    <p>Ya fuera de todas las bromas, quería decirte que me alegra mucho haberte conocido y que hayamos terminado siendo amigos. Valoro mucho tu amistad y espero que sigamos compartiendo buenos momentos. Y espero que me sigas carreando en la grieta del fornicador por mucho tiempo más, si no es mucha molestia.</p>
+    <p>Y quiero que sepas que puedes contar conmigo para lo que necesites. No soy el mejor opinando ni dando consejos, pero puedo estar ahí escuchando y acompañándote.</p>
+    <p>Te quiero caleta, hrmn.</p>
+    <p>PD1: Mientras escribía esto parecía autista caminando de un lado hacia otro jsdkddsjsk, que caminando es cuando me pongo más creativo.</p>
+    <p>PD2: Hay que convencer al Hanyer para que nos pasemos maincra hardcore.</p>
+  </template>
+  <template id="letter-alessandro">
+    <p>Feliz cumpleaños, hermanito mío. ❤️</p>
+    <p>No sé ni por dónde empezar, porque siento que hay tantas cosas que quisiera decirte que a veces las palabras se quedan cortas. Hoy quiero aprovechar tu cumpleaños para recordarte lo importante que eres para mí y lo agradecido que estoy de tenerte en mi vida.</p>
+    <p>Si miro hacia atrás y veo todas esas fotos, me doy cuenta de cuánto hemos crecido, de todas las etapas que hemos vivido, de las risas, las tonteras, los momentos buenos y también los difíciles. Hemos pasado de ser esos niños que jugaban a las luchas a ir construyendo nuestras propias vidas, pero hay algo que espero que nunca cambie: que siempre podamos contar el uno con el otro.</p>
+    <p>Quiero darte las gracias por ser como eres, por tu forma de enfrentar la vida, por tu corazón y, especialmente, por ser una persona tan valiente. Admiro muchísimo la fortaleza que tienes, la manera en que sigues adelante y cómo, a pesar de las dificultades que puedan aparecer, encuentras la forma de continuar. Quizás no te lo digo tan seguido como debería, pero estoy muy orgulloso de ti, nunca dudes de lo mucho que vales ni de todo lo que eres capaz de conseguir.</p>
+    <p>También quiero pedirte perdón si alguna vez no he sido el hermano que mereces, si he cometido errores, si te he fallado, si he dicho algo que te haya hecho sentir mal o si en algún momento no he sabido demostrarte cuánto te quiero. Créeme que jamás ha sido mi intención. Sé que no soy perfecto y que muchas veces puedo equivocarme, pero nunca quisiera que mis errores te hicieran dudar del cariño inmenso que te tengo. Siempre voy a querer lo mejor para ti y quiero que tengas algo muy claro: eres una de las personas más importantes de mi vida. Y cuando digo eso, lo digo de verdad, para mí no eres solamente mi hermano, eres mi compañero de vida, mi cómplice en tantas historias y, por sobre todas las cosas, mi mejor amigo. Eres de esas personas que quiero tener siempre cerca, con quien quiero seguir compartiendo momentos, celebrando logros, superando dificultades y creando recuerdos que algún día podamos mirar y recordar con una sonrisa.</p>
+    <p>No importa cuántos años pasen, cuánto cambiemos o qué caminos nos toque recorrer. Quiero que sepas que siempre vas a tener un hermano que te quiere, que te admira, que cree en ti y que va a estar orgulloso de verte crecer y cumplir tus sueños.</p>
+    <p>Ojalá la vida te devuelva multiplicado todo lo bueno que tienes para entregar. Que nunca te falten motivos para sonreír, personas que te quieran de verdad, sueños por cumplir y fuerzas para enfrentar cualquier desafío. Te mereces cosas maravillosas y espero poder estar ahí para ver cómo las vas consiguiendo.</p>
+    <p>Gracias por existir, por ser mi hermano y por regalarme tantos recuerdos que guardo con muchísimo cariño. Si pudiera elegir nuevamente a alguien para compartir esta vida como hermano, te volvería a elegir a ti, una y mil veces.</p>
+    <p>Feliz cumpleaños, hermano. Te amo muchísimo. Y nunca olvides que, antes que cualquier otra cosa, más que mi hermano eres mi mejor amigo, y eso no va a cambiar jamás. ❤️</p>
+  </template>
 </body>
 </html>

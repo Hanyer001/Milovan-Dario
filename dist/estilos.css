@@ -433,3 +433,22 @@ html.letter-locked, .letter-locked body { overflow: hidden; }
   .creators-section .creator-open { transition-duration: 0s; }
 }
 
+
+.music-toggle {
+  position: fixed;
+  z-index: 11;
+  inset: auto max(1rem, env(safe-area-inset-right)) var(--bottom) auto;
+  min-block-size: 44px;
+  padding-inline: .8rem;
+  border: 1px solid #c6a0ff4a;
+  border-radius: .75rem;
+  background: #160f20ed;
+  color: #eee3fb;
+  font: .68rem/1.4 var(--mono);
+  cursor: pointer;
+}
+.music-toggle[aria-pressed="false"] { color: #c7bbd0; text-decoration: line-through; }
+@media (max-width: 43rem) {
+  .music-toggle { inset-block: calc(var(--safe-top) + .5rem) auto; }
+  .tft-in-view .music-toggle { inset-block: auto var(--bottom); }
+}
