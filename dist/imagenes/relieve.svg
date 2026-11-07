@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 610">
+<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M0 32V0h32" fill="none" stroke="#9c7453" stroke-opacity=".24"/></pattern><path id="a" vector-effect="non-scaling-stroke" d="M-226-25C-248-120-164-190-69-168 11-150 34-111 118-131 202-152 269-70 246-1 218 84 137 80 88 142 30 213-60 171-100 115-134 68-210 55-226-25Z"/><path id="b" vector-effect="non-scaling-stroke" d="M-147-30C-157-123-70-144 6-111 65-86 125-105 149-44 180 35 119 113 37 121-31 127-43 82-105 75-155 69-167 15-147-30Z"/></defs>
+<path fill="#e9d7b6" d="M0 0h760v610H0z"/><path fill="url(#grid)" d="M0 0h760v610H0z"/>
+<g fill="none" stroke="#a44c34" stroke-width="1.4" opacity=".78">
+<use href="#a" transform="translate(225 235) scale(0.210)"/>
+<use href="#a" transform="translate(225 235) scale(0.273)"/>
+<use href="#a" transform="translate(225 235) scale(0.336)"/>
+<use href="#a" transform="translate(225 235) scale(0.399)"/>
+<use href="#a" transform="translate(225 235) scale(0.462)"/>
+<use href="#a" transform="translate(225 235) scale(0.525)"/>
+<use href="#a" transform="translate(225 235) scale(0.588)"/>
+<use href="#a" transform="translate(225 235) scale(0.651)"/>
+<use href="#a" transform="translate(225 235) scale(0.714)"/>
+<use href="#a" transform="translate(225 235) scale(0.777)"/>
+<use href="#a" transform="translate(225 235) scale(0.840)"/>
+<use href="#a" transform="translate(225 235) scale(0.903)"/>
+<use href="#a" transform="translate(225 235) scale(0.966)"/>
+<use href="#a" transform="translate(225 235) scale(1.029)"/>
+<use href="#a" transform="translate(225 235) scale(1.092)"/>
+<use href="#a" transform="translate(225 235) scale(1.155)"/>
+<use href="#a" transform="translate(225 235) scale(1.218)"/>
+<use href="#a" transform="translate(225 235) scale(1.281)"/>
+<use href="#a" transform="translate(225 235) scale(1.344)"/>
+<use href="#a" transform="translate(225 235) scale(1.407)"/>
+<use href="#a" transform="translate(225 235) scale(1.470)"/>
+<use href="#a" transform="translate(225 235) scale(1.533)"/>
+<use href="#a" transform="translate(225 235) scale(1.596)"/>
+<use href="#a" transform="translate(225 235) scale(1.659)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.17)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.24)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.31)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.38)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.45)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.52)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.59)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.66)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.73)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.80)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.87)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(0.94)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.01)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.08)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.15)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.22)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.29)"/>
+<use href="#b" transform="translate(669 479) rotate(-24) scale(1.36)"/>
+</g><path d="M566-20C493 80 591 137 520 225s-31 145-99 210-62 110-20 200" fill="none" stroke="#e9d7b6" stroke-width="14"/>
+<path d="M566-20C493 80 591 137 520 225s-31 145-99 210-62 110-20 200" fill="none" stroke="#537987" stroke-width="5"/>
+<g fill="#583a2d" font-family="monospace" font-size="14" letter-spacing="3"><text x="24" y="43">UC–01</text><text x="23" y="575">CUENCA SUPERIOR</text><text x="688" y="55">N ↑</text></g></svg>

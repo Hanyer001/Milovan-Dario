@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Un recorrido para Milovan Darío, creado por Hanyer Alegría y Ronald Villamán.">
+  <title>Hola, Milovan Darío</title>
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (['#inicio', '#creadores', '#ucato'].includes(location.hash)) {
+      const url = new URL(location.href);
+      url.hash = '';
+      history.replaceState(history.state, '', url);
+    }
+    document.documentElement.classList.add('opening-locked');
+  </script>
+  <link rel="stylesheet" href="./estilos.css?v=clean-1">
+  <link rel="stylesheet" href="./lol.css?v=clean-1">
+  <link rel="stylesheet" href="./tft.css?v=clean-1">
+  <link rel="stylesheet" href="./garage.css?v=5">
+  <link rel="preload" as="image" href="./imagenes/arena-amistad.svg">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@splinetool/viewer@2.0.151/build/spline-viewer.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" integrity="sha384-P8VzCVnT9NBUkMrpcIZrJbA7EBjJvh/fJS6PmP+4nLIM284DtsImIv8D0fFjIkeh" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" integrity="sha384-kdY9hFBPoAPpxcrLihsO3APivFOxtQwSeYdzFD5CIIfLurwhdMrEHhkQxZJDkxgk" crossorigin="anonymous"></script>
+  <script defer src="./apertura.js?v=clean-1"></script>
+  <script defer src="./escena.js"></script>
+  <script defer src="./recorrido.js?v=clean-1"></script>
+  <script defer src="./cartas.js"></script>
+  <script defer src="./lol.js?v=clean-1"></script>
+  <script defer src="./tft.js?v=soft-entry-4"></script>
+  <script defer src="./garage.js?v=3"></script>
+</head>
+<body>
+  <div id="opening-gate" class="launch-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-content">
+      <button class="hold-button" type="button" aria-labelledby="gate-title">
+        <span class="pokeball" aria-hidden="true">
+          <span class="pokeball-glow"></span>
+          <span class="pokeball-core"></span>
+        </span>
+      </button>
+      <h1 id="gate-title">Mantén presionado para descubrir la sorpresa.</h1>
+      <p class="sr-only" role="status" id="gate-status"></p>
+    </div>
+  </div>
+
+  <spline-viewer class="gastly-viewer" url="./modelos/gastly.splinecode"
+    data-source="https://my.spline.design/gastly-RIPW2bTfQrYzVrGwJKNEOVW7/"
+    loading="eager" events-target="global" aria-label="Escena interactiva de Gastly"></spline-viewer>
+
+  <div class="chapter-backdrop chapter-backdrop--dusk" aria-hidden="true"></div>
+  <div class="chapter-backdrop chapter-backdrop--daylight" aria-hidden="true"></div>
+
+  <div class="lol-atmosphere" aria-hidden="true">
+    <div class="lol-fog lol-fog--arcane"></div>
+    <div class="lol-fog lol-fog--crimson"></div>
+    <div class="lol-atmosphere-vignette"></div>
+  </div>
+
+  <main id="recorrido" aria-label="Recorrido para Milovan Darío">
+    <div class="opening-stage">
+      <section class="opening-scene hero" id="inicio" data-theme="umbral" aria-labelledby="titulo">
+        <div class="hero-copy">
+          <h1 id="titulo" tabindex="-1">Hola, <em>Milovan Darío.</em></h1>
+        </div>
+        <p class="codex-badge"><span class="codex-icon" aria-hidden="true">✳</span><span>Y optimizado por Codex. He analizado la situación y mi primera recomendación es que te rías.</span></p>
+      </section>
+
+      <section class="opening-scene creators-section" id="creadores" aria-labelledby="creadores-titulo">
+        <div class="creators-copy">
+          <h2 id="creadores-titulo" tabindex="-1">Los creadores<span>.</span></h2>
+          <p class="creators-invitation">
+            <span>Hay una sorpresa detrás de estas fotos.</span>
+            <small>Toca una foto y después la pegatina del sobre para descubrirla.</small>
+          </p>
+        </div>
+        <div class="polaroids">
+          <article class="polaroid polaroid--hanyer">
+            <button class="creator-open" type="button" data-letter="hanyer" aria-haspopup="dialog" aria-controls="creator-letter-dialog" aria-label="Abrir carta de Hanyer Alegría">
+              <span class="polaroid-photo">
+                <img src="./imagenes/hanyer-foto.png" width="1440" height="1920" alt="Retrato de Hanyer Alegría" decoding="async">
+              </span>
+              <span class="creator-caption">
+                <strong>Hanyer Alegría</strong>
+                <span class="creator-role">Coautor y cómplice del humor.</span>
+                <span class="creator-hint">Abrir mi carta ↗</span>
+              </span>
+            </button>
+          </article>
+          <article class="polaroid polaroid--alessandro">
+            <button class="creator-open" type="button" data-letter="alessandro" aria-haspopup="dialog" aria-controls="creator-letter-dialog" aria-label="Abrir carta de Alessandro Molina">
+              <span class="polaroid-photo">
+                <img src="./imagenes/alessandro-foto.png" width="524" height="580" alt="Retrato de Alessandro Molina" decoding="async">
+              </span>
+              <span class="creator-caption">
+                <strong>Alessandro Molina</strong>
+                <span class="creator-role">El autor intelectual de la sorpresa.</span>
+                <span class="creator-hint">Abrir mi carta ↗</span>
+              </span>
+            </button>
+          </article>
+          <article class="polaroid polaroid--ronald">
+            <button class="creator-open" type="button" data-letter="ronald" aria-haspopup="dialog" aria-controls="creator-letter-dialog" aria-label="Abrir carta de Ronald Villamán">
+              <span class="polaroid-photo">
+                <img src="./imagenes/ronald-foto.png" width="720" height="960" alt="Retrato de Ronald Villamán" decoding="async">
+              </span>
+              <span class="creator-caption">
+                <strong>Ronald Villamán</strong>
+                <span class="creator-role">Coautor de la sorpresa para Milovan.</span>
+                <span class="creator-hint">Abrir mi carta ↗</span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="ucato" class="ucato-section" data-theme="ucato" aria-labelledby="titulo-ucato">
+      <img class="logo-bg-uc" src="./imagenes/escudo-cduc-azul.webp" width="850" height="850" alt="" decoding="async">
+
+      <div class="ucato-inner">
+        <div class="ucato-index">
+          <p><span aria-hidden="true"></span> CAPÍTULO 02</p>
+          <p>ÁLBUM CRUZADO</p>
+        </div>
+        <header class="ucato-heading">
+          <h2 id="titulo-ucato" tabindex="-1"><span>Universidad</span> <span>Católica</span></h2>
+          <p>Milovan, desde chico llevas a Universidad Católica en el corazón. Basta mirar la camiseta y las letras pintadas en la cara para volver a esa alegría de niño. Qué lindo que esos colores sigan siendo parte de tu historia.</p>
+        </header>
+
+        <div class="ucato-gallery" aria-labelledby="titulo-recuerdos">
+          <div class="ucato-gallery-heading">
+            <h3 id="titulo-recuerdos">Una infancia cruzada</h3>
+            <span>01–03 / FOTOS DE INFANCIA</span>
+          </div>
+          <div class="ucato-bento">
+            <figure class="ucato-card ucato-card--feature">
+              <img src="./imagenes/universidad-catolica-01.jpg" width="960" height="717" alt="Dos jóvenes junto a una pelota, uno con la camiseta de Universidad Católica" loading="lazy" decoding="async">
+              <figcaption><span>01</span><strong>Con la camiseta desde chico</strong></figcaption>
+            </figure>
+            <figure class="ucato-card">
+              <img src="./imagenes/universidad-catolica-02.jpg" width="960" height="960" alt="Dos niños con las letras UC pintadas en la frente" loading="lazy" decoding="async">
+              <figcaption><span>02</span><strong>Los colores hasta en la cara</strong></figcaption>
+            </figure>
+            <figure class="ucato-card">
+              <img src="./imagenes/universidad-catolica-03.jpg" width="604" height="453" alt="Dos niños sonríen junto a un adulto" loading="lazy" decoding="async">
+              <figcaption><span>03</span><strong>Un abrazo de infancia</strong></figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="lol-section" id="league-of-legends" data-theme="lol" aria-labelledby="lol-title">
+      <div class="lol-shell">
+        <div class="lol-index"><span>CAPÍTULO 03</span><span>MUCHOS AÑOS EN LA GRIETA</span></div>
+        <header class="lol-heading">
+          <p class="lol-eyebrow">MILOVAN / CARRIL CENTRAL</p>
+          <h2 id="lol-title">El terror de<br>la <em>Midlane.</em></h2>
+          <p class="lol-intro">Llevas muchos años en la Grieta. Partidas que se alargaron hasta tarde, remontadas que todavía se recuerdan y dos campeones que ya son parte de tu historia.</p>
+        </header>
+
+        <div class="lol-champions">
+          <article class="lol-champion lol-champion--ryze" tabindex="0" aria-labelledby="ryze-title">
+            <img class="lol-splash" src="./imagenes/ryze.jpg" width="1215" height="717" alt="Ryze invoca magia arcana entre runas azules" loading="lazy" decoding="async">
+            <div class="lol-champion-shade" aria-hidden="true"></div>
+            <span class="lol-champion-number" aria-hidden="true">01</span>
+            <div class="lol-champion-copy">
+              <p class="lol-eyebrow">MAGIA ARCANA</p>
+              <h3 id="ryze-title">Ryze</h3>
+              <p class="lol-main">Uno de tus mains</p>
+              <p>Runas, memoria y una última jugada. Hay campeones que, después de tantos años, se sienten como volver a casa.</p>
+            </div>
+          </article>
+          <article class="lol-champion lol-champion--katarina" tabindex="0" aria-labelledby="katarina-title">
+            <img class="lol-splash" src="./imagenes/katarina.jpg" width="1215" height="717" alt="Katarina sostiene sus dagas entre sombras carmesí" loading="lazy" decoding="async">
+            <div class="lol-champion-shade" aria-hidden="true"></div>
+            <span class="lol-champion-number" aria-hidden="true">02</span>
+            <div class="lol-champion-copy">
+              <p class="lol-eyebrow">INSTINTO ASESINO</p>
+              <h3 id="katarina-title">Katarina</h3>
+              <p class="lol-main">Tu otra forma de entrar a la pelea</p>
+              <p>La daga en el lugar preciso y ese instante en que todo encaja. Años de partidas para reconocer el momento de lanzarse.</p>
+            </div>
+          </article>
+        </div>
+        <div class="lol-memory">
+          <p class="lol-eyebrow">MUCHOS AÑOS. LA MISMA PROMESA.</p>
+          <blockquote>“Ganamos una y nos vamos.”</blockquote>
+          <p>Cómo olvidar esas noches interminables de “una más, una más”. Si perdíamos, no nos podíamos ir con una derrota. Si ganábamos, siempre cabía otra. Y entre runas, dagas y risas, ya eran las cinco de la mañana.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tft-section" id="teamfight-tactics" data-theme="tft" aria-labelledby="tft-title">
+      <dialog class="tft-encounter-overlay" aria-labelledby="tft-encounter-title" data-lenis-prevent>
+        <div class="tft-encounter-wash" aria-hidden="true"></div>
+        <div class="tft-encounter-content">
+          <p class="tft-eyebrow">CAPÍTULO 04 / ELIGE TU AUMENTO</p>
+          <h2 id="tft-encounter-title">⚠️ ENCUENTRO LEGENDARIO</h2>
+          <p class="tft-system-message">La amistad ha alterado las reglas. Todos los aumentos de esta partida serán Prismáticos.</p>
+          <div class="tft-augments">
+            <button class="augment-card" type="button" data-augment="Tryhardeo Escolar"><span class="augment-symbol" aria-hidden="true">Ⅰ</span><strong>Tryhardeo Escolar</strong><span class="augment-description">Otorga evasión absoluta. Te permite esconderte en el fondo de la sala en Física y jugar en el celular sin ser descubierto.</span><span class="augment-action">ELEGIR AUMENTO ↗</span></button>
+            <button class="augment-card" type="button" data-augment="La Mentira de las 4 AM"><span class="augment-symbol" aria-hidden="true">Ⅱ</span><strong>La Mentira de las 4 AM</strong><span class="augment-description">Regenera energía nocturna. La frase '¿Una más y nos vamos?' se convierte mágicamente en 5 partidas seguidas.</span><span class="augment-action">ELEGIR AUMENTO ↗</span></button>
+            <button class="augment-card" type="button" data-augment="Pacto Esmeralda"><span class="augment-symbol" aria-hidden="true">Ⅲ</span><strong>Pacto Esmeralda</strong><span class="augment-description">Inmunidad al tilt. Sella el pacto que nos llevó a Diamante en la season después de las frutas. Jugaremos menos, pero esa amistad no baja de rango.</span><span class="augment-action">ELEGIR AUMENTO ↗</span></button>
+          </div>
+          <p class="tft-encounter-hint">Elige tu aumento. El tablero tiene algo que contarte.</p>
+        </div>
+      </dialog>
+      <aside class="tft-active-buff" aria-label="Aumento activo" hidden><span aria-hidden="true">✦</span><div><small>AUMENTO ACTIVO</small><strong></strong></div></aside>
+      <div class="tft-board-container">
+      <div class="tft-chat-container">
+        <header class="tft-heading">
+          <p class="tft-eyebrow">CAPÍTULO 04 / NUESTRO PACTO</p>
+          <h2 id="tft-title">Teamfight <em>Tactics.</em></h2>
+          <p>Del fondo de la sala a las cuatro de la mañana.</p>
+        </header>
+        <div class="tft-stage-layout">
+          <div class="tft-arena" aria-label="Tablero hexagonal interactivo de nuestros recuerdos">
+            <div class="arena-hud"><span>MANO + MILOVAN</span><span>EL PACTO SIGUE VIVO <b>✦</b></span></div>
+            <div class="arena-ground">
+              <div class="arena-round" aria-hidden="true"><span>✦</span> PREPARACIÓN <span>✦</span></div>
+              <div class="arena-tiles"><div class="arena-grid" aria-hidden="true"><span class="arena-hex" style="--col:0;--row:0;--shift:0"></span><span class="arena-hex" style="--col:1;--row:0;--shift:0"></span><span class="arena-hex" style="--col:2;--row:0;--shift:0"></span><span class="arena-hex" style="--col:3;--row:0;--shift:0"></span><span class="arena-hex" style="--col:4;--row:0;--shift:0"></span><span class="arena-hex" style="--col:5;--row:0;--shift:0"></span><span class="arena-hex" style="--col:6;--row:0;--shift:0"></span><span class="arena-hex" style="--col:0;--row:1;--shift:1"></span><span class="arena-hex" style="--col:1;--row:1;--shift:1"></span><span class="arena-hex" style="--col:2;--row:1;--shift:1"></span><span class="arena-hex" style="--col:3;--row:1;--shift:1"></span><span class="arena-hex" style="--col:4;--row:1;--shift:1"></span><span class="arena-hex" style="--col:5;--row:1;--shift:1"></span><span class="arena-hex" style="--col:6;--row:1;--shift:1"></span><span class="arena-hex" style="--col:0;--row:2;--shift:0"></span><span class="arena-hex" style="--col:1;--row:2;--shift:0"></span><span class="arena-hex" style="--col:2;--row:2;--shift:0"></span><span class="arena-hex" style="--col:3;--row:2;--shift:0"></span><span class="arena-hex" style="--col:4;--row:2;--shift:0"></span><span class="arena-hex" style="--col:5;--row:2;--shift:0"></span><span class="arena-hex" style="--col:6;--row:2;--shift:0"></span><span class="arena-hex" style="--col:0;--row:3;--shift:1"></span><span class="arena-hex" style="--col:1;--row:3;--shift:1"></span><span class="arena-hex" style="--col:2;--row:3;--shift:1"></span><span class="arena-hex" style="--col:3;--row:3;--shift:1"></span><span class="arena-hex" style="--col:4;--row:3;--shift:1"></span><span class="arena-hex" style="--col:5;--row:3;--shift:1"></span><span class="arena-hex" style="--col:6;--row:3;--shift:1"></span></div>
+                <button class="arena-unit" type="button" data-memory="0" style="--col:1;--row:1;--shift:1" aria-label="Ryze: abrir el recuerdo del comienzo" aria-pressed="false"><span class="arena-stars" aria-hidden="true">★★★</span><img src="./imagenes/ryze.jpg" alt="" width="90" height="90"><span class="arena-unit-name">Ryze</span></button>
+                <button class="arena-unit arena-unit--kat" type="button" data-memory="1" style="--col:5;--row:1;--shift:1" aria-label="Katarina: abrir el recuerdo de la universidad" aria-pressed="false"><span class="arena-stars" aria-hidden="true">★★★</span><img src="./imagenes/katarina.jpg" alt="" width="90" height="90"><span class="arena-unit-name">Katarina</span></button>
+                <button class="arena-unit arena-unit--pact" type="button" data-memory="2" style="--col:3;--row:2;--shift:0" aria-label="Cristal Diamante: abrir nuestro logro" aria-pressed="false"><span class="arena-diamond" aria-hidden="true">✦</span><span class="arena-unit-name">El pacto</span></button>
+              </div>
+            </div>
+            <div class="arena-bench" aria-label="Banquillo: tres recuerdos y seis casillas libres"><button class="arena-reserve" type="button" data-memory="0" aria-label="Abrir recuerdo: 01 / LAS FRUTAS" aria-pressed="false"><img src="./imagenes/ryze.jpg" alt="" width="72" height="72"></button><button class="arena-reserve" type="button" data-memory="1" aria-label="Abrir recuerdo: 02 / LA UNIVERSIDAD" aria-pressed="false"><img src="./imagenes/katarina.jpg" alt="" width="72" height="72"></button><button class="arena-reserve" type="button" data-memory="2" aria-label="Abrir recuerdo: 03 / DIAMANTE" aria-pressed="false"><span aria-hidden="true">✦</span></button><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span><span class="arena-reserve arena-reserve--empty" aria-hidden="true"></span></div>
+            <div class="arena-inspect" tabindex="0" data-lenis-prevent role="status" aria-live="polite"><strong>Una composición de recuerdos.</strong><p>Toca a Ryze, Katarina o el cristal para abrir un recuerdo del tablero.</p></div>
+          </div>
+          <div class="tft-phone"><div class="tft-phone-header"><span aria-hidden="true">M</span><div><strong>Mano 🤝</strong><small>Una conversación de tantas</small></div></div>
+        <div class="tft-chat whatsapp-chat" role="log" aria-live="off" aria-label="Una conversación que se repite">
+          <div class="chat-bubble chat-bubble--own"><p>Mano, vamos para el fondo para jugar sus TFT.</p></div>
+          <div class="chat-bubble chat-bubble--other"><p>Sale su TFT rápido en el celu 🤫</p></div>
+          <div class="chat-bubble chat-bubble--other chat-bubble--later"><p>Hermano son las 4 AM...</p></div>
+          <div class="chat-bubble chat-bubble--own"><p>¿Ganamos una más y nos vamos? Si saco el Mega Mecha, esta la ganamos 🙏</p></div>
+        </div>
+          </div>
+        </div>
+        <p class="tft-scroll-hint">DESLIZA. EL PACTO SIGUE VIVO. <span aria-hidden="true">↓</span></p>
+      </div>
+
+      <div class="tft-timeline-container tft-timeline" aria-label="Nuestra historia en TFT">
+        <div class="tft-line" aria-hidden="true"></div>
+        <article class="hex-milestone hex-node">
+          <div class="hex-marker" aria-hidden="true"><span class="hex-halo"></span><div class="hex-shape"><span>01</span></div></div>
+          <div class="hex-copy"><p class="tft-eyebrow">EL COMIENZO</p><h3>3 Seasons de Tryhardeo</h3><p>Todo empezó en la época de las frutas. Lo que partió como una partida casual para probar, se terminó convirtiendo en nuestra rutina sagrada.</p></div>
+        </article>
+        <article class="hex-milestone hex-node">
+          <div class="hex-marker" aria-hidden="true"><span class="hex-halo"></span><div class="hex-shape"><span>02</span></div></div>
+          <div class="hex-copy"><p class="tft-eyebrow">LA MEJOR COMPOSICIÓN</p><h3>El ramo era lo de menos</h3><p>En la universidad, la verdadera estrategia era sentarnos al fondo y lograr que la profe no nos pillara jugando. Pero nos retaba, nos pedía explicar lo que acababa de decir y nos mirábamos sin saber nada: por estar pendientes del TFT, no habíamos puesto atención. Qué manera de reírnos después.</p></div>
+        </article>
+        <article class="hex-milestone hex-node">
+          <div class="hex-marker" aria-hidden="true"><span class="hex-halo"></span><div class="hex-shape"><span>03</span></div></div>
+          <div class="hex-copy"><p class="tft-eyebrow">DIAMANTE: LO CONSEGUIMOS</p><h3>El Infierno por los LP</h3><p>Lo que sudamos y rezamos para subir. Empezamos en la época de las frutas y en la season siguiente ya habíamos llegado a Diamante. Entre las clases, las risas y las noches de “una más”, ese logro también quedó como un recuerdo de los dos. Esta season hemos jugado menos, pero el pacto sigue vivo.</p></div>
+        </article>
+      </div>
+      </div>
+    </section>
+
+    <section class="finale-section" id="gran-final" data-theme="finale" aria-labelledby="finale-title">
+      <div class="finale-aura" aria-hidden="true"></div>
+      <div class="finale-content">
+        <p class="finale-kicker"><span aria-hidden="true"></span> VICTORIA <span aria-hidden="true"></span></p>
+        <h1 id="finale-title">GRACIAS POR<br>CARREARNOS.</h1>
+        <p class="finale-message">De parte de Hanyer, Ronald y Alessandro.<br>Una sorpresa para el mejor.</p>
+      </div>
+    </section>
+
+    <section class="garage-section" id="garaje-de-recuerdos" data-theme="garage" aria-labelledby="garage-title">
+      <div class="garage-pause" aria-hidden="true"></div>
+      <p class="garage-cliffhanger" data-garage-reveal>La carrera aún no termina... sigue bajando<span aria-hidden="true">↓</span></p>
+      <div class="garage-inner">
+        <header class="garage-heading" data-garage-reveal><p class="garage-eyebrow">CAPÍTULO 05 / COLECCIÓN PERSONAL</p><h2 id="garage-title">El Garaje<br>de <em>Recuerdos.</em></h2><p>Algunas piezas no se coleccionan por su valor.<br>Se guardan por todo lo que te hacen recordar.</p><span class="garage-invitation">Explora las cinco miniaturas.</span></header>
+        <svg class="garage-symbols" width="0" height="0" aria-hidden="true"><defs><symbol id="garage-car" viewBox="0 0 340 130">
+          <ellipse cx="171" cy="107" rx="143" ry="10" fill="#000" opacity=".55"/>
+          <path d="m43 79 35-8 35-37 75-2 52 34 49 8 21 19-4 14H30l-6-12Z" fill="currentColor"/>
+          <path d="m89 69 31-29 60-1 42 28Z" fill="#151f29" stroke="#b5c3cf" stroke-opacity=".45" stroke-width="2"/>
+          <path d="m139 41-6 26M189 43l22 23" stroke="#62717f" stroke-width="3"/>
+          <path d="M36 85h57l20-10 120-1 48 10M103 78l-1 19h128l9-18" stroke="#fff" stroke-opacity=".23" stroke-width="2"/>
+          <path d="M26 94h25l-2 9H29ZM286 87l15 4 4 10h-22Z" fill="#dddac9"/>
+          <path d="M27 81h21v7H24Z" fill="#e85759"/>
+          <path d="M156 77h16" stroke="#c5c9cd" stroke-width="3"/>
+          <path d="M30 106h276" stroke="#192127" stroke-width="5"/>
+          <circle cx="83" cy="102" r="23" fill="#0b0e12"/><circle cx="83" cy="102" r="14" fill="#969ea5"/><circle cx="83" cy="102" r="9" fill="#26313a"/><path d="m83 89 0 26m-13-13h26m-22-9 18 18m-18 0 18-18" stroke="#bfc7cd" stroke-width="2"/>
+          <circle cx="257" cy="102" r="23" fill="#0b0e12"/><circle cx="257" cy="102" r="14" fill="#969ea5"/><circle cx="257" cy="102" r="9" fill="#26313a"/><path d="m257 89 0 26m-13-13h26m-22-9 18 18m-18 0 18-18" stroke="#bfc7cd" stroke-width="2"/>
+        </symbol></defs></svg>
+        <div class="shelves-container">
+          <div class="garage-shelf-label" data-garage-reveal><span>VITRINA 01</span><span>01–03 / ESCALA 1:24</span></div>
+          <div class="shelf-row shelf-row--three"><div class="garage-box-slot" data-garage-reveal style="--garage-delay:0ms">
+  <article class="diecast-box" data-memory="01" style="--car-color:#f07a30">
+   <div class="box-face-side" aria-hidden="true"><strong>MOTORMAX</strong><span>1:24 SERIES</span></div><div class="box-face-top" aria-hidden="true"><span>DIE-CAST COLLECTION</span></div>
+   <button class="diecast-trigger" type="button" aria-haspopup="dialog" aria-controls="garage-lightbox" aria-label="Ver pieza 01: PAGANI Huayra">
+    <span class="box-brand"><span>DIE-CAST COLLECTION</span><span>1:24<small>SERIES</small></span></span>
+    <span class="box-window"><span class="box-window-caption">MOTORMAX / DIE-CAST</span><span class="box-plinth" aria-hidden="true"></span><img class="diecast-car" src="./imagenes/garage/car-01.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Miniatura representativa de PAGANI Huayra"><span class="box-plastic" aria-hidden="true"></span></span>
+    <span class="box-plate"><span class="box-nameplate"><strong>PAGANI</strong><em>Huayra</em></span><span class="box-catalog"><strong>RECUERDO 01</strong><span>COLECCIÓN PERSONAL</span></span></span>
+   </button>
+   <div class="box-content" data-title="Las primeras partidas de TFT" hidden>
+    <div class="garage-media-shell garage-memory-media"><img src="./imagenes/recuerdos/01-tft.jpg" width="2160" height="3840" loading="lazy" decoding="async" alt="Pantalla de Teamfight Tactics que muestra el primer lugar"></div>
+    <p class="garage-caption">¿Recuerdas nuestras primeras partidas de TFT? Así empezaron esas horas interminables de juego.</p>
+   </div>
+  </article>
+ </div><div class="garage-box-slot" data-garage-reveal style="--garage-delay:90ms">
+  <article class="diecast-box" data-memory="02" style="--car-color:#b1c8d1">
+   <div class="box-face-side" aria-hidden="true"><strong>MOTORMAX</strong><span>1:24 SERIES</span></div><div class="box-face-top" aria-hidden="true"><span>DIE-CAST COLLECTION</span></div>
+   <button class="diecast-trigger" type="button" aria-haspopup="dialog" aria-controls="garage-lightbox" aria-label="Ver pieza 02: ASTON MARTIN DB5">
+    <span class="box-brand"><span>DIE-CAST COLLECTION</span><span>1:24<small>SERIES</small></span></span>
+    <span class="box-window"><span class="box-window-caption">MOTORMAX / DIE-CAST</span><span class="box-plinth" aria-hidden="true"></span><img class="diecast-car" src="./imagenes/garage/car-02.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Miniatura representativa de ASTON MARTIN DB5"><span class="box-plastic" aria-hidden="true"></span></span>
+    <span class="box-plate"><span class="box-nameplate"><strong>ASTON MARTIN</strong><em>DB5</em></span><span class="box-catalog"><strong>RECUERDO 02</strong><span>COLECCIÓN PERSONAL</span></span></span>
+   </button>
+   <div class="box-content" data-title="Las primeras salidas" hidden>
+    <div class="garage-media-shell garage-memory-media"><video data-src="./videos/recuerdo-02.mp4" width="720" height="1280" loop muted playsinline controls preload="none" aria-label="Video de una de las primeras salidas fuera de la universidad"></video></div>
+    <p class="garage-caption">¿Recuerdas las primeras veces que salíamos fuera de la universidad? Todavía me acuerdo de que casi maté al Javer, jajaja.</p>
+    <p class="garage-media-status" role="status" aria-live="polite" hidden></p>
+   </div>
+  </article>
+ </div><div class="garage-box-slot" data-garage-reveal style="--garage-delay:180ms">
+  <article class="diecast-box" data-memory="03" style="--car-color:#98b882">
+   <div class="box-face-side" aria-hidden="true"><strong>MOTORMAX</strong><span>1:24 SERIES</span></div><div class="box-face-top" aria-hidden="true"><span>DIE-CAST COLLECTION</span></div>
+   <button class="diecast-trigger" type="button" aria-haspopup="dialog" aria-controls="garage-lightbox" aria-label="Ver pieza 03: LAMBORGHINI Gallardo Super Trofeo">
+    <span class="box-brand"><span>DIE-CAST COLLECTION</span><span>1:24<small>SERIES</small></span></span>
+    <span class="box-window"><span class="box-window-caption">MOTORMAX / DIE-CAST</span><span class="box-plinth" aria-hidden="true"></span><img class="diecast-car" src="./imagenes/garage/car-03.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Miniatura representativa de LAMBORGHINI Gallardo Super Trofeo"><span class="box-plastic" aria-hidden="true"></span></span>
+    <span class="box-plate"><span class="box-nameplate"><strong>LAMBORGHINI</strong><em>Gallardo Super Trofeo</em></span><span class="box-catalog"><strong>RECUERDO 03</strong><span>COLECCIÓN PERSONAL</span></span></span>
+   </button>
+   <div class="box-content" data-title="Los tres mosqueteros" hidden>
+    <div class="garage-media-shell garage-memory-media"><img src="./imagenes/recuerdos/03-mosqueteros.jpg" width="960" height="1280" loading="lazy" decoding="async" alt="Tres personajes de Minecraft en botes al atardecer"></div>
+    <p class="garage-caption">¿Recuerdas a los tres mosqueteros? En esa aventura, hasta el aire era peligroso…</p>
+   </div>
+  </article>
+ </div><div class="shelf-ledge" aria-hidden="true"></div></div>
+          <div class="garage-shelf-label" data-garage-reveal><span>VITRINA 02</span><span>04–05 / ESCALA 1:24</span></div>
+          <div class="shelf-row shelf-row--two"><div class="garage-box-slot" data-garage-reveal style="--garage-delay:0ms">
+  <article class="diecast-box" data-memory="04" style="--car-color:#638bbb">
+   <div class="box-face-side" aria-hidden="true"><strong>MOTORMAX</strong><span>1:24 SERIES</span></div><div class="box-face-top" aria-hidden="true"><span>DIE-CAST COLLECTION</span></div>
+   <button class="diecast-trigger" type="button" aria-haspopup="dialog" aria-controls="garage-lightbox" aria-label="Ver pieza 04: DODGE Challenger SRT">
+    <span class="box-brand"><span>DIE-CAST COLLECTION</span><span>1:24<small>SERIES</small></span></span>
+    <span class="box-window"><span class="box-window-caption">MOTORMAX / DIE-CAST</span><span class="box-plinth" aria-hidden="true"></span><img class="diecast-car" src="./imagenes/garage/car-04.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Miniatura representativa de DODGE Challenger SRT"><span class="box-plastic" aria-hidden="true"></span></span>
+    <span class="box-plate"><span class="box-nameplate"><strong>DODGE</strong><em>Challenger SRT</em></span><span class="box-catalog"><strong>RECUERDO 04</strong><span>COLECCIÓN PERSONAL</span></span></span>
+   </button>
+   <div class="box-content" data-title="Lo diste todo" hidden>
+    <div class="garage-media-shell garage-memory-media"><video data-src="./videos/recuerdo-04.mp4" width="352" height="624" loop muted playsinline controls preload="none" aria-label="Video del recuerdo Lo diste todo"></video></div>
+    <p class="garage-caption">¿Recuerdas esa vez que no conocías a nadie y aun así lo diste todo?</p>
+    <p class="garage-media-status" role="status" aria-live="polite" hidden></p>
+   </div>
+  </article>
+ </div><div class="garage-box-slot" data-garage-reveal style="--garage-delay:90ms">
+  <article class="diecast-box" data-memory="05" style="--car-color:#e05145">
+   <div class="box-face-side" aria-hidden="true"><strong>MOTORMAX</strong><span>1:24 SERIES</span></div><div class="box-face-top" aria-hidden="true"><span>DIE-CAST COLLECTION</span></div>
+   <button class="diecast-trigger" type="button" aria-haspopup="dialog" aria-controls="garage-lightbox" aria-label="Ver pieza 05: McLAREN Senna">
+    <span class="box-brand"><span>DIE-CAST COLLECTION</span><span>1:24<small>SERIES</small></span></span>
+    <span class="box-window"><span class="box-window-caption">MOTORMAX / DIE-CAST</span><span class="box-plinth" aria-hidden="true"></span><img class="diecast-car" src="./imagenes/garage/car-05.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Miniatura representativa de McLAREN Senna"><span class="box-plastic" aria-hidden="true"></span></span>
+    <span class="box-plate"><span class="box-nameplate"><strong>McLAREN</strong><em>Senna</em></span><span class="box-catalog"><strong>RECUERDO 05</strong><span>COLECCIÓN PERSONAL</span></span></span>
+   </button>
+   <div class="box-content" data-title="Igual te animaste" hidden>
+    <div class="garage-media-shell garage-memory-media"><video data-src="./videos/recuerdo-05.mp4" width="352" height="624" loop muted playsinline controls preload="none" aria-label="Video del recuerdo Igual te animaste"></video></div>
+    <p class="garage-caption">¿Recuerdas esa vez que no conocías a nadie, pero igual te animaste a ir, aunque al final te tuviste que devolver?</p>
+    <p class="garage-media-status" role="status" aria-live="polite" hidden></p>
+   </div>
+  </article>
+ </div><div class="shelf-ledge" aria-hidden="true"></div></div>
+        </div>
+      </div>
+      <section class="garage-dedication" aria-labelledby="garage-dedication-title">
+        <div class="garage-dedication-inner" data-garage-reveal>
+          <p class="garage-eyebrow">PARA TI, MILOVAN</p>
+          <h2 id="garage-dedication-title">Gracias por todo, <em>hermano.</em></h2>
+          <div class="garage-dedication-letter">
+            <p>Hicimos este universo con amor y dedicación, solo para ti. Queríamos guardar juntos esos momentos que todavía nos hacen reír cuando los recordamos.</p>
+            <p>Para mí eres un hermano, y para nuestros amigos también eres alguien muy importante. Nunca olvides que siempre vas a poder contar con nosotros.</p>
+            <p>Gracias por estar, por las risas y por todos los momentos que hemos compartido. Por favor, nunca cambies.</p>
+          </div>
+          <p class="garage-dedication-signoff">Te queremos, hermano.</p>
+        </div>
+      </section>
+      <dialog class="garage-lightbox" id="garage-lightbox" aria-labelledby="garage-modal-title" data-lenis-prevent>
+        <div class="garage-modal-wash" aria-hidden="true"></div>
+        <div class="garage-modal-panel"><header class="garage-modal-heading"><div><p class="garage-modal-number"></p><h3 id="garage-modal-title"></h3></div><button class="garage-close" type="button" aria-label="Cerrar recuerdo">Cerrar <span aria-hidden="true">×</span></button></header><div class="garage-modal-body"></div></div>
+      </dialog>
+    </section>
+  </main>
+
+  <dialog class="letter-dialog" id="creator-letter-dialog" aria-labelledby="letter-dialog-title" data-lenis-prevent>
+    <div class="letter-shell">
+      <header class="letter-toolbar">
+        <h2 id="letter-dialog-title">Carta de Hanyer Alegría</h2>
+        <button class="letter-dismiss" type="button" aria-label="Cerrar carta">×</button>
+      </header>
+      <div class="letter-stage">
+        <div class="letter-envelope">
+          <span class="envelope-address">Para Milovan</span>
+          <div class="envelope-pocket" aria-hidden="true"></div>
+          <div class="envelope-flap" aria-hidden="true"></div>
+          <button class="envelope-seal" type="button" aria-label="Abrir el sobre">
+            <img src="./imagenes/garchomp.png" width="96" height="96" alt="Garchomp">
+          </button>
+          <p class="envelope-hint">Toca la pegatina para abrir</p>
+        </div>
+        <article class="letter-paper" aria-label="Contenido de la carta" tabindex="0" hidden>
+          <div class="letter-paper-detail" aria-hidden="true"><span></span><img src="./imagenes/garchomp.png" width="96" height="96" alt=""></div>
+          <div class="letter-body"></div>
+        </article>
+      </div>
+    </div>
+  </dialog>
+  <template id="letter-hanyer">
+    <p>Hermano, una palabra complicada y a la vez fácil de decir pero pocas veces que de verdad se sienten real, y de eso te quiero hablar, sin darme cuenta creé una conexión la cual es grande y nunca la creí tener por alguien que la verdad conozco hace poco ya que antes de ti mi hermano o mejor amigo es alguien el cual conozco hace 20 años, literal de que nací, pero no creí que en tan poco tiempo podría volver a decirlo y sentirlo, ya que hemos pasado tantas cosas, siendo que al principio tu humor me hizo que me cayeras mal pero con el tiempo quedamos solo los dos para todos lados, a donde estuvieras estaba, a donde estuviera tú estabas y lo agradezco y por eso mismo quiero darte estas palabras sé que entre hombres no es común decir esto pero nunca está mal recordarlo, eres alguien en cual pienso y me río y me hace decir no importa que wea estemos haciendo pero si es contigo se siente bacan y me cagare de risa, a veces no es ni necesario decir una palabra, el silencio no es incómodo y tener eso no es fácil, con gente que conozco hace años aún se siente así, pero contigo no,</p>
+    <p>Se hermano que no estás en tu mejor momento y que mentalmente estás teniendo tus batallas internas, sabes que cualquier cosa siempre estaré, aunque no quieras hablar del tema, estaré para lo que necesites y gracias por tu estar para mí cuando lo necesite ya que muchas noches fueron las cuales me diste consejos cuando tenía el tema de mi padre el cual por suerte se arregló, pero ahí estabas tú escuchándome siendo que soy alguien que habla demasiado, a veces ni palabras dices pero yo ya tengo una historia nueva para contar y gracias hermano por estar y por eso mismo.</p>
+    <p>Te quiero hermano</p>
+    <p class="letter-signature">- Hanyer Alegría</p>
+  </template>
+  <template id="letter-ronald"></template>
+  <template id="letter-alessandro"></template>
+</body>
+</html>

@@ -1,0 +1,143 @@
+.garage-section {
+  --garage-red:#ec4932;--garage-ink:#f3f0e8;--garage-muted:#a7a5a6;--garage-rule:#ffffff1c;
+  position:relative;isolation:isolate;pointer-events:auto;color-scheme:dark;color:var(--garage-ink);
+  background:radial-gradient(ellipse at 50% 32%,#44362c24,transparent 60%),linear-gradient(#02050c,#0b0b0d 45rem,#060607);
+}
+.garage-section [hidden] { display:none!important; }
+.garage-section .garage-pause { block-size:50vh;block-size:50svh; }
+.garage-section .garage-cliffhanger { padding:0 var(--gutter);text-align:center;color:#ef6668;font:500 clamp(.82rem,1.4vw,1.05rem)/1.6 var(--mono);letter-spacing:.035em;text-shadow:0 0 14px #f1424570; }
+.garage-section .garage-cliffhanger>span { display:block;margin-top:1.5rem;color:#c04c50; }
+.garage-section .garage-inner { position:relative;max-inline-size:92rem;margin-inline:auto;padding:clamp(5rem,12vw,10rem) var(--gutter) 2rem; }
+.garage-section .garage-inner::before { position:absolute;z-index:-1;inset:5rem 0 0;content:"";opacity:.3;pointer-events:none;background:repeating-linear-gradient(45deg,#ffffff04 0 2px,transparent 2px 7px),repeating-linear-gradient(-45deg,#ffffff03 0 2px,transparent 2px 7px);mask-image:linear-gradient(transparent,#000 20%,#000 80%,transparent); }
+.garage-section .garage-eyebrow,.garage-section .garage-shelf-label { font:600 .62rem/1.6 var(--mono);letter-spacing:.1em; }
+.garage-section .garage-eyebrow { color:var(--garage-red); }
+.garage-section .garage-heading h2 { margin:.23em 0 .3em;font:650 clamp(3rem,7.5vw,6.4rem)/.95 "Segoe UI",Arial,sans-serif;letter-spacing:-.065em; }
+.garage-section .garage-heading h2 em { color:#bebbc0;font-family:Georgia,serif;font-weight:400; }
+.garage-section .garage-heading>p:last-of-type { color:var(--garage-muted);font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.8; }
+.garage-section .garage-invitation { display:block;margin-top:1.5rem;color:#ddd8d4;font-size:.85rem; }
+.garage-section .shelves-container { perspective:1500px;margin-top:clamp(3.5rem,8vw,6rem); }
+.garage-section .garage-shelf-label { display:flex;justify-content:space-between;gap:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--garage-rule);color:#8f8b8d; }
+.garage-section .shelf-row { position:relative;display:grid;gap:clamp(1.5rem,3.2vw,3rem);padding:2.3rem 1rem 2.7rem;margin-bottom:3.5rem; }
+.garage-section .shelf-row--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.garage-section .shelf-row--two { grid-template-columns:repeat(6,minmax(0,1fr)); }
+.garage-section .shelf-row--two .garage-box-slot:first-child { grid-column:2 / span 2; }
+.garage-section .shelf-row--two .garage-box-slot:nth-child(2) { grid-column:4 / span 2; }
+.garage-section .garage-box-slot { min-inline-size:0;perspective:1100px; }
+.garage-section .diecast-box { position:relative;transform:rotateY(-9deg) rotateX(4deg);transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.7,.3,1); }
+.garage-section .diecast-box:hover { transform:translateY(-7px) rotateY(-4deg) rotateX(2deg); }
+.garage-section .diecast-trigger { position:relative;isolation:isolate;display:flex;flex-direction:column;inline-size:100%;padding:0;border:1px solid #8a8880;border-radius:.2rem;color:#f1f0e9;text-align:start;cursor:pointer;transform:translateZ(20px);box-shadow:0 1.3rem 1.8rem #0008;background:radial-gradient(#0c0d0e 1px,transparent 1.2px) 0 0/4px 4px,#4b4d4f;touch-action:manipulation; }
+.garage-section .diecast-trigger::after { position:absolute;z-index:-1;inset:0 0 0 58%;content:"";clip-path:polygon(44% 0,100% 0,100% 100%,0 100%);background:linear-gradient(115deg,#ef4d2f 0 23%,#f0eee4 24% 29%,#c2c2b8 30% 60%,#a8aaa5); }
+.garage-section .diecast-trigger:focus-visible { outline:2px solid #ef715c;outline-offset:6px; }
+.garage-section .box-brand { display:flex;justify-content:space-between;align-items:center;gap:.5rem;inline-size:100%;min-block-size:2.4rem;padding:.5rem .7rem .55rem;font:500 clamp(.6rem,1.05vw,.95rem)/1.05 Impact,"Arial Narrow",sans-serif;letter-spacing:.1em;text-shadow:0 1px 1px #000a; }
+.garage-section .box-brand>span:last-child { color:#292b2c;text-align:center;font:700 .8rem/1 "Arial Narrow",Arial,sans-serif;text-shadow:none;letter-spacing:-.04em; }
+.garage-section .box-brand small { display:block;margin-top:.1rem;font:700 .4rem/1 var(--mono);letter-spacing:.05em; }
+.garage-section .box-window { position:relative;isolation:isolate;display:grid;place-items:center;overflow:hidden;inline-size:calc(100% - 1.2rem);aspect-ratio:1.64;margin:.15rem .6rem 0;border:2px solid #eee9df;border-radius:.55rem .9rem .2rem .2rem;background:radial-gradient(ellipse at 50% 5%,#c0c6c123,transparent 72%),linear-gradient(#1c1f23,#080a0c 75%);box-shadow:0 0 0 2px #e9482e,inset 0 1rem 1.8rem #0008; }
+.garage-section .box-window-caption { position:absolute;z-index:3;top:.45rem;left:.5rem;color:#a5a6a2;font:500 clamp(.35rem,.55vw,.5rem)/1 var(--mono);letter-spacing:.08em; }
+.garage-section .box-plinth { position:absolute;left:4%;right:4%;bottom:8%;block-size:12%;border:1px solid #555b5959;border-radius:50%;transform:rotateX(55deg);background:#050606;box-shadow:0 .5rem 1rem #0009; }
+.garage-section .diecast-car { position:relative;z-index:1;display:block;inline-size:100%;block-size:100%;min-block-size:0;object-fit:contain;transform:translateY(1%);transition:transform .7s cubic-bezier(.2,.7,.3,1); }
+.garage-section .diecast-box:hover .diecast-car { transform:translateY(-1.5%) scale(1.025); }
+.garage-section .box-plastic { position:absolute;z-index:2;inset:0 auto 0 -25%;inline-size:150%;pointer-events:none;opacity:.7;transform:translateX(-8%);background:linear-gradient(115deg,#ffffff0a,transparent 21%,#ffffff1c 23%,#ffffff03 26%,transparent 65%,#ffffff15 70%,transparent 80%);transition:transform .9s ease,opacity .5s ease; }
+.garage-section .diecast-box:hover .box-plastic { transform:translateX(9%);opacity:.9; }
+.garage-section .diecast-box.is-open .box-plastic { opacity:0;transform:translateX(15%); }
+.garage-section .box-plate { display:flex;flex-direction:column;align-items:end;gap:.4rem;inline-size:100%;min-block-size:3.5rem;padding:.45rem .6rem .5rem; }
+.garage-section .box-nameplate { display:flex;align-items:center;justify-content:center;gap:.4rem;max-inline-size:100%;padding:.3rem .6rem;border:1px solid #d6d7cf;border-radius:.65rem .2rem .65rem .2rem;background:linear-gradient(#161819,#070909);box-shadow:0 0 0 2px #1b1b1c;white-space:nowrap; }
+.garage-section .box-nameplate strong { color:#eeeeea;font:600 clamp(.42rem,.65vw,.6rem)/1.2 "Arial Narrow",Arial,sans-serif;letter-spacing:.12em; }
+.garage-section .box-nameplate em { color:#d7d7ce;font:italic 500 clamp(.52rem,.8vw,.78rem)/1 Georgia,serif;letter-spacing:-.015em; }
+.garage-section .box-catalog { display:flex;align-items:center;justify-content:space-between;gap:.5rem;inline-size:100%;font:600 clamp(.35rem,.5vw,.46rem)/1.5 var(--mono); }
+.garage-section .box-catalog>strong { color:#e5e2d7;letter-spacing:.08em; }
+.garage-section .box-catalog>span { color:#252929;font-size:.85em; }
+.garage-section .box-face-side { position:absolute;top:0;left:100%;inline-size:40px;block-size:100%;transform-origin:left center;transform:translateZ(20px) rotateY(90deg);background:linear-gradient(90deg,#b2b5ac,#d0d1c8 65%,#8d918d);border:1px solid #737970; }
+.garage-section .box-face-side strong { display:block;position:absolute;left:8px;top:16%;writing-mode:vertical-rl;font:800 .65rem/1 Arial,sans-serif;color:#343936;letter-spacing:.06em; }
+.garage-section .box-face-side span { position:absolute;left:10px;bottom:.7rem;writing-mode:vertical-rl;font:700 .42rem var(--mono);color:#414640; }
+.garage-section .box-face-top { position:absolute;left:0;right:0;top:0;block-size:40px;transform-origin:center top;transform:translateZ(20px) rotateX(-90deg);backface-visibility:hidden;background:radial-gradient(#090b0c 1px,transparent 1.2px) 0 0/4px 4px,#51565a;border:1px solid #6b726e;transition:transform .7s cubic-bezier(.2,.7,.3,1); }
+.garage-section .box-face-top span { display:block;padding:.6rem .8rem;color:#c7c9c0;font:600 .5rem var(--mono);letter-spacing:.15em; }
+.garage-section .diecast-box.is-open .box-face-top { transform:translateZ(20px) rotateX(-150deg); }
+.garage-section .shelf-ledge { position:absolute;z-index:-1;left:-.5rem;right:-.5rem;bottom:.7rem;block-size:1.15rem;transform:rotateX(15deg) translateZ(-50px);background:linear-gradient(#73716d 0 9%,#36373a 10% 30%,#16171a 31% 90%,#0b0b0d);border-top:1px solid #ffffff28;box-shadow:0 1.3rem 1.8rem #000a,0 -.4rem 1rem #0004; }
+.garage-section .garage-dedication {
+  padding: clamp(5rem, 12vw, 10rem) var(--gutter) clamp(6rem, 14vw, 12rem);
+  background: #000;
+}
+.garage-section .garage-dedication-inner {
+  max-inline-size: 44rem;
+  margin-inline: auto;
+}
+.garage-section .garage-dedication .garage-eyebrow { color: #fa8a7c; }
+.garage-section .garage-dedication h2 {
+  max-inline-size: 15ch;
+  margin: .85rem 0 clamp(1.5rem, 4vw, 2.75rem);
+  color: var(--garage-ink);
+  font: 500 clamp(2.5rem, 6.5vw, 5.3rem)/1.03 Georgia, serif;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.garage-section .garage-dedication h2 em {
+  color: #e0c8bc;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.garage-section .garage-dedication-letter {
+  display: grid;
+  gap: 1.25rem;
+  max-inline-size: 52ch;
+  color: #d6cfca;
+  font: 400 clamp(1.06rem, 2vw, 1.33rem)/1.75 Georgia, serif;
+}
+.garage-section .garage-dedication-signoff {
+  margin-block-start: 2rem;
+  color: var(--garage-ink);
+  font: italic 500 clamp(1.25rem, 3vw, 1.9rem)/1.35 Georgia, serif;
+}
+.garage-section.garage-enhanced [data-garage-reveal] { opacity:0;transform:translate3d(0,28px,0);transition:opacity .85s ease var(--garage-delay,0ms),transform 1s cubic-bezier(.16,.7,.3,1) var(--garage-delay,0ms); }
+.garage-section.garage-enhanced [data-garage-reveal].visible { opacity:1;transform:translate3d(0,0,0); }
+html.garage-locked,html.garage-locked body { overflow:hidden;overscroll-behavior:none; }
+html.garage-locked { scrollbar-gutter:stable; }
+.garage-section .garage-lightbox { position:fixed;inset:0;z-index:100;isolation:isolate;inline-size:100%;max-inline-size:none;block-size:100dvh;max-block-size:none;margin:0;padding:1rem;border:0;overflow-y:auto;overscroll-behavior:contain;background:transparent;color:var(--garage-ink); }
+.garage-section .garage-lightbox:not([open]) { display:none; }
+.garage-section .garage-lightbox[open] { display:grid;place-items:center; }
+.garage-section .garage-lightbox::backdrop { background:transparent; }
+.garage-section .garage-modal-wash { position:fixed;z-index:-1;inset:0;background:#030306ed;opacity:0;pointer-events:none; }
+.garage-section .garage-modal-panel { inline-size:min(100%,67rem);min-inline-size:0;overflow:hidden;border:1px solid #816066;border-radius:.65rem;background:#0d0c0f;box-shadow:0 2rem 5rem #0009; }
+.garage-section .garage-modal-panel:has(.garage-memory-media) { inline-size: min(100%, 36rem); }
+.garage-section .garage-modal-heading { display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid #ffffff19; }
+.garage-section .garage-modal-number { color:var(--garage-red);font:600 .6rem/1.5 var(--mono);letter-spacing:.12em; }
+.garage-section .garage-modal-heading h3 { margin:.3rem 0 0;font:500 clamp(1.15rem,2.8vw,1.65rem)/1.15 Georgia,serif; }
+.garage-section .garage-close { flex-shrink:0;min-block-size:44px;display:flex;align-items:center;gap:.75rem;padding:.4rem .7rem;border:1px solid #ffffff29;border-radius:.3rem;background:#ffffff07;color:#eee8e9;font:500 .75rem "Segoe UI",Arial,sans-serif;cursor:pointer; }
+.garage-section .garage-close span { font-size:1.6rem;line-height:1; }
+.garage-section .garage-close:focus-visible { outline:2px solid var(--garage-red);outline-offset:3px; }
+.garage-section .garage-modal-body { max-block-size:calc(100dvh - 9rem);overflow-y:auto;overscroll-behavior:contain; }
+.garage-section .garage-media-shell { position:relative;display:grid;place-items:center;aspect-ratio:16/9;min-inline-size:0;background:#050506; }
+.garage-section .garage-media-shell>img,.garage-section .garage-media-shell>video { display:block;inline-size:100%;block-size:100%;min-block-size:0;max-block-size:65svh;object-fit:contain; }
+.garage-section .garage-memory-media {
+  aspect-ratio: auto;
+  block-size: min(60dvh, 40rem);
+  background: #000;
+}
+.garage-section .garage-memory-media video { max-inline-size: min(100%, 34dvh); }
+.garage-section .garage-caption { margin:0;padding:1.1rem 1.3rem 1.3rem;color:#c2babc;font-size:clamp(.9rem,1.5vw,1.05rem);line-height:1.75; }
+.garage-section .garage-media-status { margin:0;padding:0 1.3rem 1rem;color:#e2b7bc;font-size:.8rem; }
+.garage-section .garage-media-status:empty { display:none; }
+
+.garage-section .garage-preview { isolation:isolate;background:radial-gradient(ellipse at 50% 30%,#3c424a,#14171b 65%,#0a0c0f); }
+.garage-section .garage-preview::before { position:absolute;z-index:-1;left:12%;right:12%;bottom:12%;block-size:9%;border-radius:50%;background:#0007;content:""; }
+.garage-section .garage-preview>img { padding:clamp(1rem,3vw,2.5rem); }
+@media(max-width:48rem) {
+ .garage-section .shelf-row--three,.garage-section .shelf-row--two { grid-template-columns:minmax(0,1fr);gap:4.2rem;padding:2rem 1rem 1rem; }
+ .garage-section .shelf-row--two .garage-box-slot:first-child,.garage-section .shelf-row--two .garage-box-slot:nth-child(2) { grid-column:auto; }
+ .garage-section .garage-box-slot { inline-size:min(100%,25rem);margin-inline:auto; }
+ .garage-section .shelf-ledge { display:none; }
+ .garage-section .diecast-box::after { position:absolute;z-index:-1;content:"";left:-.75rem;right:-.75rem;bottom:-1.1rem;block-size:.9rem;transform:rotateX(15deg) translateZ(-50px);background:linear-gradient(#73716d 0 9%,#36373a 10% 30%,#16171a 31% 90%,#0b0b0d);box-shadow:0 .8rem 1.2rem #0009; }
+ .garage-section .box-brand { font-size:.75rem; }
+ .garage-section .box-window-caption { font-size:.45rem; }
+ .garage-section .box-nameplate strong { font-size:.5rem; }
+ .garage-section .box-nameplate em { font-size:.7rem; }
+ .garage-section .box-catalog { font-size:.45rem; }
+ .garage-section .garage-shelf-label { font-size:.52rem; }
+ .garage-section .garage-modal-heading { padding:.8rem; }
+ .garage-section .garage-lightbox { padding:.65rem; }
+ .garage-section .garage-caption { padding:1rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .garage-section.garage-enhanced [data-garage-reveal] { opacity:1;transform:none;transition:none; }
+ .garage-section :is(.diecast-box,.box-plastic,.box-face-top,.diecast-car) { transition:none; }
+ .garage-section .diecast-box:hover { transform:rotateY(-9deg) rotateX(4deg); }
+}
